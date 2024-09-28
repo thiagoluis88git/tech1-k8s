@@ -1,10 +1,10 @@
-# FastFood API - Description
+# FastFood API - Kubernetes resources
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
 - [Description](#description)
-- [How to use]()
+- [How to use](#how-to-use)
 - [AWS](#aws)
 - [Kubernetes](#kubernetes)
   - [Secrets (Locally)](#secrets-locally)
