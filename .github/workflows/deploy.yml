@@ -6,8 +6,6 @@ name: Deploy Fastfood in EKS
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ] 
 
 jobs:
 
