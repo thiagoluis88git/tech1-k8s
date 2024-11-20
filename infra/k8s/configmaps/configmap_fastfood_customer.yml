@@ -7,8 +7,8 @@ data:
   POSTGRES_DB: fastfood_db_customer
   DB_HOST: fastfood-database.cfaoo0ogib3a.us-east-1.rds.amazonaws.com
   DB_PORT: "5432"
-  AWS_COGNITO_USER_POOL_ID: us-east-1_UXEi986IL
-  AWS_COGNITO_CLIENT_ID: 6as6ato24sa16j522gto6c1r5v
+  AWS_COGNITO_USER_POOL_ID: us-east-1_79AHMQBdx
+  AWS_COGNITO_CLIENT_ID: 1mja3mq2unc2j27vek76u4r4dp
   AWS_COGNITO_GROUP_USER: group-users
   AWS_COGNITO_GROUP_ADMIN: group-admin
   AWS_REGION: us-east-1
