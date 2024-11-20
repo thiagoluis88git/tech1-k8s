@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cm-payment
+data:
+  MONGO_DB_NAME: fastfood_payment
+  MONGO_HOST: mongodb+srv://thiagoluis88git:<db_password>@fiapdb.xe0v7.mongodb.net/?retryWrites=true&w=majority&appName=FiapDB
+  AWS_REGION: us-east-1
+  ORDERS_ROOT_API: http://svc.orders:4210/api
