@@ -5,7 +5,7 @@ metadata:
 data:
   POSTGRES_USER: fastfood_db_user
   POSTGRES_DB: fastfood_db_orders
-  DB_HOST: fastfood-database.cevl7wigxbt3.us-east-1.rds.amazonaws.com
+  DB_HOST: fastfood-database.cfaoo0ogib3a.us-east-1.rds.amazonaws.com
   DB_PORT: "5432"
   AWS_REGION: us-east-1
-  CUSTOMER_ROOT_API: http://svc.customer:3210/api
+  CUSTOMER_ROOT_API: http://svc-customer/api
