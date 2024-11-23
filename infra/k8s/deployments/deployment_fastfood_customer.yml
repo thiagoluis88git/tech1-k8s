@@ -44,22 +44,22 @@ spec:
         - name: POSTGRES_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: postgres_password
+              name: postgres-password
               key: POSTGRES_PASSWORD
         - name: QR_CODE_GATEWAY_ROOT_URL
           valueFrom:
             secretKeyRef:
-              name: qr_code_gateway_root_url
+              name: qr-code-gateway-root-url
               key: QR_CODE_GATEWAY_ROOT_URL
         - name: QR_CODE_GATEWAY_TOKEN
           valueFrom:
             secretKeyRef:
-              name: qr_code_gateway_url
+              name: qr-code-gateway-url
               key: QR_CODE_GATEWAY_TOKEN
         - name: WEBHOOK_MERCADO_LIVRE_PAYMENT
           valueFrom:
             secretKeyRef:
-              name: webhool_mercado_livre_payment
+              name: webhool-mercado-livre-payment
               key: WEBHOOK_MERCADO_LIVRE_PAYMENT
         ports:
         - containerPort: 3210
