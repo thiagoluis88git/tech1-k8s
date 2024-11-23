@@ -38,8 +38,6 @@ spec:
       - name: fastfood-orders
         image: thiagoluis88/fastfood-orders:1.0.1
         envFrom:
-          - secretRef:
-              name: app-env-secret
           - configMapRef:
               name: cm-orders
         ports:

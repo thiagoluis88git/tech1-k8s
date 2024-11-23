@@ -38,8 +38,6 @@ spec:
       - name: fastfood-customer
         image: thiagoluis88/fastfood-customers:1.0.1
         envFrom:
-          - secretRef:
-              name: app-env-secret
           - configMapRef:
               name: cm-customer
         ports:
