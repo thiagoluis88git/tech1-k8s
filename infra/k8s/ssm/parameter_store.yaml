@@ -8,3 +8,5 @@ spec:
         objects: |
             - objectName: "POSTGRES_PASSWORD"
               objectType: "ssmparameter"
+            - objectName: "MONGO_PASSWORD"
+              objectType: "ssmparameter"
