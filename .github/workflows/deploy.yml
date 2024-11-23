@@ -24,6 +24,13 @@ jobs:
           aws-session-token: ${{ secrets.FASTFOOD_AWS_SESSION_TOKEN }}
           aws-region: us-east-1
 
+      - name: Retrieve the secret and decode it to a KUBE_CONFIG_BASE64
+        env:
+          KUBE_CONFIG_BASE64: ${{ secrets.KUBE_CONFIG_BASE64 }}
+        run: |
+          echo $KUBE_CONFIG_BASE64 | base64 --decode > /.kube/config
+          cat /.kube/config
+
       - name: Installing Helm
         run: |
           curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
