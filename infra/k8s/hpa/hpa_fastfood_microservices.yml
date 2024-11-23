@@ -7,15 +7,15 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: fastfood-customer
-  minReplicas: 2
-  maxReplicas: 5
+  minReplicas: 1
+  maxReplicas: 2
   metrics:
   - type: Resource
     resource:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 30
+        averageUtilization: 50
 
 ---
 
@@ -28,15 +28,15 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: fastfood-orders
-  minReplicas: 2
-  maxReplicas: 5
+  minReplicas: 1
+  maxReplicas: 2
   metrics:
   - type: Resource
     resource:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 30
+        averageUtilization: 50
 
 ---
 
@@ -49,12 +49,12 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: fastfood-payment
-  minReplicas: 2
-  maxReplicas: 5
+  minReplicas: 1
+  maxReplicas: 2
   metrics:
   - type: Resource
     resource:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 30
+        averageUtilization: 50
