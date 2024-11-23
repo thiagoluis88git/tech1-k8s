@@ -25,11 +25,10 @@ jobs:
           aws-region: us-east-1
 
       - name: Retrieve the secret and decode it to a KUBE_CONFIG_BASE64
-        env:
-          KUBE_CONFIG_BASE64: ${{ secrets.KUBE_CONFIG_BASE64 }}
         run: |
-          echo $KUBE_CONFIG_BASE64 | base64 --decode > /.kube/config
-          cat /.kube/config
+          mkdir ${HOME}/.kube
+          echo ${{ secrets.KUBE_CONFIG_BASE64 }} | base64 --decode > ${HOME}/.kube/config
+          cat ${HOME}/.kube/config
 
       - name: Installing Helm
         run: |
