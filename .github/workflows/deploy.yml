@@ -24,12 +24,24 @@ jobs:
           aws-session-token: ${{ secrets.FASTFOOD_AWS_SESSION_TOKEN }}
           aws-region: us-east-1
 
+      - name: Installing Helm
+        run: |
+          curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+          chmod 700 get_helm.sh
+          ./get_helm.sh
+
+      - name: Installing Secrets Store CSI Drive
+        run: |
+          helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
+          helm install -n kube-system csi-secrets-store secrets-store-csi-driver/secrets-store-csi-driver
+          kubectl apply -f https://raw.githubusercontent.com/aws/secrets-store-csi-driver-provider-aws/main/deployment/aws-provider-installer.yaml
+
       - name: Update kube config
         run: aws eks update-kubeconfig --region us-east-1 --name fastfood-cluster
     
       - name: Deploy to EKS
         run: |
-          kubectl apply -k infra/k8s/secret/
+          kubectl apply -k infra/k8s/ssm/
           kubectl apply -f infra/k8s/configmaps/
           kubectl apply -f infra/k8s/metrics/
           kubectl apply -f infra/k8s/hpa/
