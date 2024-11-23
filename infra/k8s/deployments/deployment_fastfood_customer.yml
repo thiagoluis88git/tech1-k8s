@@ -37,6 +37,9 @@ spec:
       containers:
       - name: fastfood-customer
         image: thiagoluis88/fastfood-customers:1.0.1
+        command:
+          - "/bin/sleep"
+          - "10000"
         envFrom:
           - configMapRef:
               name: cm-customer
