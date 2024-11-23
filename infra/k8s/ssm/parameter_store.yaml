@@ -6,13 +6,13 @@ spec:
   provider: aws
   parameters:
     objects: |
-      - objectName: "POSTGRES_PASSWORD"
+      - objectName: "postgres-password"
         objectType: "ssmparameter"
-      - objectName: "MONGO_PASSWORD"
+      - objectName: "mong-password"
         objectType: "ssmparameter"
-      - objectName: "QR_CODE_GATEWAY_ROOT_URL"
+      - objectName: "qr-code-gateway-root-url"
         objectType: "ssmparameter"
-      - objectName: "QR_CODE_GATEWAY_TOKEN"
+      - objectName: "qr-code-gateway-token"
         objectType: "ssmparameter"
-      - objectName: "WEBHOOK_MERCADO_LIVRE_PAYMENT"
+      - objectName: "webhool-mercado-livre-payment"
         objectType: "ssmparameter"
