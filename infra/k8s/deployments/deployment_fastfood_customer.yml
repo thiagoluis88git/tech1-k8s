@@ -40,6 +40,27 @@ spec:
         envFrom:
           - configMapRef:
               name: cm-customer
+        env:
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: POSTGRES_PASSWORD
+              key: POSTGRES_PASSWORD
+        - name: QR_CODE_GATEWAY_ROOT_URL
+          valueFrom:
+            secretKeyRef:
+              name: QR_CODE_GATEWAY_ROOT_URL
+              key: QR_CODE_GATEWAY_ROOT_URL
+        - name: QR_CODE_GATEWAY_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: QR_CODE_GATEWAY_TOKEN
+              key: QR_CODE_GATEWAY_TOKEN
+        - name: WEBHOOK_MERCADO_LIVRE_PAYMENT
+          valueFrom:
+            secretKeyRef:
+              name: WEBHOOK_MERCADO_LIVRE_PAYMENT
+              key: WEBHOOK_MERCADO_LIVRE_PAYMENT
         ports:
         - containerPort: 3210
           # name: app

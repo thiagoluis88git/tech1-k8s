@@ -1,12 +1,18 @@
 apiVersion: secrets-store.csi.x-k8s.io/v1alpha1
 kind: SecretProviderClass
 metadata:
-    name: aws-secrets
+  name: aws-secrets
 spec:
-    provider: aws
-    parameters:
-        objects: |
-            - objectName: "POSTGRES_PASSWORD"
-              objectType: "ssmparameter"
-            - objectName: "MONGO_PASSWORD"
-              objectType: "ssmparameter"
+  provider: aws
+  parameters:
+    objects: |
+      - objectName: "POSTGRES_PASSWORD"
+        objectType: "ssmparameter"
+      - objectName: "MONGO_PASSWORD"
+        objectType: "ssmparameter"
+      - objectName: "QR_CODE_GATEWAY_ROOT_URL"
+        objectType: "ssmparameter"
+      - objectName: "QR_CODE_GATEWAY_TOKEN"
+        objectType: "ssmparameter"
+      - objectName: "WEBHOOK_MERCADO_LIVRE_PAYMENT"
+        objectType: "ssmparameter"
