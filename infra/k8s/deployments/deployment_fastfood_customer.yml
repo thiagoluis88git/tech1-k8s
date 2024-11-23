@@ -54,7 +54,7 @@ spec:
           - name: QR_CODE_GATEWAY_TOKEN
             valueFrom:
               secretKeyRef:
-                name: qr-code-gateway-url
+                name: qr-code-gateway-token
                 key: QR_CODE_GATEWAY_TOKEN
           - name: WEBHOOK_MERCADO_LIVRE_PAYMENT
             valueFrom:
