@@ -38,8 +38,6 @@ spec:
       - name: fastfood-customer
         image: thiagoluis88/fastfood-customers:1.0.1
         envFrom:
-          - secretRef:
-              name: app-env-secret
           - configMapRef:
               name: cm-customer
         ports:
@@ -65,3 +63,10 @@ spec:
         resources:
           requests:
             cpu: 50m
+      volumes:
+        - name: secrets-store-inline
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: "aws-secrets"
