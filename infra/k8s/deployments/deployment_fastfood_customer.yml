@@ -37,6 +37,10 @@ spec:
       containers:
       - name: fastfood-customer
         image: thiagoluis88/fastfood-customers:1.0.1
+        volumeMounts:
+        - name: secrets-store-inline
+          mountPath: "/mnt/secrets-store"
+          readOnly: true
         envFrom:
           - configMapRef:
               name: cm-customer
