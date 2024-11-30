@@ -38,6 +38,8 @@ spec:
       - name: fastfood-payment
         image: thiagoluis88/fastfood-payment:1.0.0
         envFrom:
+          - secretRef:
+              name: app-env-secret
           - configMapRef:
               name: cm-payment
         ports:
@@ -63,10 +65,10 @@ spec:
         resources:
           requests:
             cpu: 50m
-      volumes:
-        - name: secrets-store-inline
-          csi:
-            driver: secrets-store.csi.k8s.io
-            readOnly: true
-            volumeAttributes:
-              secretProviderClass: "aws-secrets"
+      # volumes:
+      #   - name: secrets-store-inline
+      #     csi:
+      #       driver: secrets-store.csi.k8s.io
+      #       readOnly: true
+      #       volumeAttributes:
+      #         secretProviderClass: "aws-secrets"
