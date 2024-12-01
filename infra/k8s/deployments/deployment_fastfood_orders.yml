@@ -42,27 +42,6 @@ spec:
               name: app-env-secret
           - configMapRef:
               name: cm-orders
-        env:
-          - name: POSTGRES_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: postgres-password
-                key: POSTGRES_PASSWORD
-          - name: QR_CODE_GATEWAY_ROOT_URL
-            valueFrom:
-              secretKeyRef:
-                name: qr-code-gateway-root-url
-                key: QR_CODE_GATEWAY_ROOT_URL
-          - name: QR_CODE_GATEWAY_TOKEN
-            valueFrom:
-              secretKeyRef:
-                name: qr-code-gateway-token
-                key: QR_CODE_GATEWAY_TOKEN
-          - name: WEBHOOK_MERCADO_LIVRE_PAYMENT
-            valueFrom:
-              secretKeyRef:
-                name: webhool-mercado-livre-payment
-                key: WEBHOOK_MERCADO_LIVRE_PAYMENT
         ports:
         - containerPort: 4210
           # name: app
