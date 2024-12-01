@@ -5,7 +5,7 @@ metadata:
 data:
   POSTGRES_USER: fastfood_db_user
   POSTGRES_DB: fastfood_db_customer
-  DB_HOST: fastfood-database.cfaoo0ogib3a.us-east-1.rds.amazonaws.com
+  DB_HOST: fastfood-database.czha89an8cfd.us-east-1.rds.amazonaws.com
   DB_PORT: "5432"
   AWS_COGNITO_USER_POOL_ID: us-east-1_79AHMQBdx
   AWS_COGNITO_CLIENT_ID: 1mja3mq2unc2j27vek76u4r4dp
