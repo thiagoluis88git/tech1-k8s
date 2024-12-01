@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: fastfood-payment
-        image: thiagoluis88/fastfood-payment:1.0.0
+        image: thiagoluis88/fastfood-payment:1.0.1
         envFrom:
           - secretRef:
               name: app-env-secret
